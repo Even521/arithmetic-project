@@ -1,11 +1,29 @@
 package com.even.service;
 
-public interface StackService {
+/**
+ * 栈(先进后出)
+ * @param <T>
+ * @author even
+ */
+public interface StackService<T> {
     /**
      * 判断栈是否为空
      * @return
      */
     boolean isEmpty();
-    //https://github.com/shinezejian/javaStructures/blob/master/src/com/zejian/structures/Stack/CalculateExpression.java
+
+    /**
+     * 元素入栈
+     * @param t
+     */
+    void push(T t);
+
+    /**
+     * h
+     * @return
+     */
+    T peek();
+
+    T pop();
 
 }
