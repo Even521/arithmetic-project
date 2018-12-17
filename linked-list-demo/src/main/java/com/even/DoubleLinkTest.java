@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author even
  */
-public class doubleLinkTest {
+public class DoubleLinkTest {
     @Test
     public void doubleLinkTest(){
         String[] letters={"A","B","C","D","Z","E","F"};
