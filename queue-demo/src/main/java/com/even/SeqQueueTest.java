@@ -16,6 +16,7 @@ public class SeqQueueTest {
         stringSeqQueue.offer("A");
         stringSeqQueue.offer("B");
         stringSeqQueue.offer("C");
+
         System.out.println("队列大小-> "+stringSeqQueue.size());
         IntStream.range(0,stringSeqQueue.size())
                 .mapToObj(

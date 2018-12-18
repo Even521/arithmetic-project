@@ -3,6 +3,7 @@ package com.even;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
+import java.util.Queue;
 
 
 /**
@@ -64,7 +65,7 @@ public class SeqQueue<T> implements IQueue<T>, Serializable {
     @Override
     public boolean add(T data) {
         //判断队列是否满队，满了则要扩容
-        if(this.front==(this.rear+1)%this.data.length){
+        if(this.isFull()){
            this.ensureCapacity(this.data.length*2+1);
         }
         insertData(data);
@@ -92,7 +93,7 @@ public class SeqQueue<T> implements IQueue<T>, Serializable {
             throw new NullPointerException("The data can\'t be null");
         }
         //队满抛出异常
-        if (this.front==(this.rear+1)%this.data.length){
+        if (isFull()){
             throw new IllegalArgumentException("The capacity of SeqQueue has reached its maximum");
         }
 
@@ -100,6 +101,13 @@ public class SeqQueue<T> implements IQueue<T>, Serializable {
         insertData(data);
         return true;
 
+    }
+    /**
+     * 判断队列是否满
+     * 求余法
+     */
+    private boolean isFull(){
+        return this.front==(this.rear+1)%this.data.length;
     }
 
     private void insertData(T data){
