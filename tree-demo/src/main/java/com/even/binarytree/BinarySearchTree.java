@@ -1,8 +1,5 @@
 package com.even.binarytree;
 
-import com.even.BinaryNode;
-import com.even.ITree;
-
 
 /**
  * Created by Administrator on 2018/12/19 0019.
@@ -10,6 +7,8 @@ import com.even.ITree;
  * @author even
  */
 public class BinarySearchTree<T> implements ITree<T> {
+
+
     /**
      * 根节点
      */

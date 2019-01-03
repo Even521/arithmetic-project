@@ -1,4 +1,6 @@
-package com.even;
+package com.even.binarytree;
+
+import com.even.binarytree.BinaryNode;
 
 /**
  * Created by Administrator on 2018/12/19 0019.

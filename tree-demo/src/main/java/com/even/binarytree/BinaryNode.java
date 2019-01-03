@@ -1,4 +1,4 @@
-package com.even;
+package com.even.binarytree;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
